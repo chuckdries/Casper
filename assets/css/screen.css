@@ -365,7 +365,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     z-index: 200;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -20px;
+    margin: 0 -20px 100px; 
     padding: 40px 0 0 0;
 }
 
@@ -455,6 +455,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     text-transform: uppercase;
 }
 
+
 /* Special Styling for home page grid (below):
 
 The first (most recent) post in the list is styled to be bigger than the others and take over the full width of the grid to give it more emphasis. Wrapped in a media query to make sure this only happens on large viewports / desktop-ish devices.
@@ -515,6 +516,18 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 }
 
+
+
+/* 6.1 Project Feed
+/* ---------------------------------------------------------- */
+
+.project-card-taglist a{
+    padding: .3em;
+    background: #efefef;
+    border: 1px solid #aaa;
+    border-radius: .3em;
+    color: inherit;
+}
 
 
 /* 7. Single Post

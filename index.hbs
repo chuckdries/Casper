@@ -22,15 +22,29 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
         <div class="post-feed">
+            <h2 style="
+                flex: 1 1 100%;
+                margin: 0 20px 20px;
+                color: white;
+            ">Projects</h2>
             {{#foreach posts}}
-
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-
+                {{#has tag="projects"}}
+                    {{> "project-card"}}
+                {{/has}}
             {{/foreach}}
         </div>
 
+        <div class="post-feed">
+            <h2 style="
+                flex: 1 1 100%;
+                margin: 0 20px 20px;
+            ">Blog posts</h2>
+            {{#foreach posts}}
+                {{^has tag="projects"}}
+                     {{> "post-card"}}
+                {{/has}}
+            {{/foreach}}
+        </div>
     </div>
 </main>
